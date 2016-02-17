@@ -1,22 +1,9 @@
-function myquery(scope, api, post, callback, isasync, error_msg, isEncrypted){
-
+function myquery(api, post, callback){
   var fullapi = 'http://121.42.58.44:81/jpy/ex01.php?api='+api;
 
-  if(window.mock){
-    callback(window.mock);
-    return;
-  }
-
-  if(typeof(isEncrypted) == 'undefined'){
-    isEncrypted = defaultEncrypted;
-  }
-  isasync = isasync == 'sync' ? false : true;
-
-  var q = encode(post, isEncrypted);
-
-  myalert = scope ? scope.myalert : alert;
+  myalert = alert;
   $.ajax({
-    async      : isasync,
+    async      : true,
     url        : fullapi,
     method     : 'POST',
     crossDomain: true,
@@ -38,14 +25,9 @@ function myquery(scope, api, post, callback, isasync, error_msg, isEncrypted){
 
       if(r.code == 1){
         callback(r);
-        return;
       }
       else if(r.code == -1){
         myalert('提交失败，系统错误');
-      }
-
-      if(typeof(error_msg) == 'function'){
-        error_msg(r);
       }
     }
   });

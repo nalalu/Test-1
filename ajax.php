@@ -5,7 +5,7 @@ if(0){
 }
 elseif($api == 'postmsg'){
   $msg = getIndex($_POST, 'msg');
-  file_put_contents("test.js", $msg);
+  file_put_contents("test.js", 'a="'.$msg.'"');
   $obj = ['code' => 1];
   echo json_encode($obj);
 }

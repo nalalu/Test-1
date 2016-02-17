@@ -1,5 +1,5 @@
 function myquery(api, post, callback){
-  var fullapi = 'http://121.42.58.44:81/jpy/ex01.php?api='+api;
+  var fullapi = 'http://121.42.58.44:81/jpy/ajax.php?api='+api;
 
   myalert = alert;
   $.ajax({

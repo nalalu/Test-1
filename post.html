@@ -7,11 +7,11 @@
   <script src="query.js"></script>
 </head>
 <body>
-
+<input id="msg" value="hello world">
 </body>
 </html>
 <script>
-  var post = {'msg': 'hello'};
+  var post = {'msg': $('#msg').val()};
   var callback = function(obj){
     console.log(obj);
   };

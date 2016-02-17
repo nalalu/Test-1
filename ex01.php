@@ -14,13 +14,28 @@ for($i=0;$i<4;$i++){
     array_push($poke,$b[$i].$a[$j]);
   }
 }
+//Ë³Ðò´òÂÒ
+$poke_new=[];
+for($i=0;$i<54;$i++){
+$temp=rand(0,53-$i);
+  $val=array_splice($poke,$temp,1);
+  array_push($poke_new,$val[0]);
+}
+//·¢ÅÆ4¸öÍæ¼Ò
+$p=[[],[],[],[],];
+for($i=0;$i<4;$i++){
+  array_push($p[0],$poke_new[$i*4]);
+  array_push($p[1],$poke_new[$i*4+1]);
+  array_push($p[2],$poke_new[$i*4+2]);
+  array_push($p[3],$poke_new[$i*4+3]);
+}
+//Ê£ÏÂµ×ÅÆ
+$dp=array_slice($poke_new,48,6);
 
-
-showarray($a);
-showarray($poke);
+showarray($poke_new);
+showarray($dp);
 function showarray($obj){
   echo '<pre>';
-  echo '\n';
   print_r($obj);
   echo '</pre>';
 }

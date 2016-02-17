@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="jquery/jquery.min.js"></script>
+  <script src="query.js"></script>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  var post = {'msg': hello};
+  var callback = function(obj){
+    console.log(obj);
+  };
+  myquery('', 'postmsg', post, callback);
+</script>

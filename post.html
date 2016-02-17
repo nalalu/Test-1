@@ -8,12 +8,16 @@
 </head>
 <body>
 <input id="msg" value="hello world">
+<button onclick="sendMsg();">send</button>
 </body>
 </html>
 <script>
-  var post = {'msg': $('#msg').val()};
-  var callback = function(obj){
-    console.log(obj);
-  };
-  myquery('postmsg', post, callback);
+  function sendMsg(){
+    var post = {'msg': $('#msg').val()};
+    var callback = function(obj){
+      console.log(obj);
+    };
+    myquery('postmsg', post, callback);
+  }
+
 </script>

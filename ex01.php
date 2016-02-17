@@ -14,11 +14,13 @@ for($i=0;$i<4;$i++){
     array_push($poke,$b[$i].$a[$j]);
   }
 }
+
+
 showarray($a);
 showarray($poke);
 function showarray($obj){
   echo '<pre>';
-  echo 'I LOVE YOU!';
+  echo '\n';
   print_r($obj);
   echo '</pre>';
 }

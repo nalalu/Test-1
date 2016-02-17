@@ -5,12 +5,12 @@ if(0){
 }
 elseif($api == 'postmsg'){
   $msg = getIndex($_POST, 'msg');
-  file_put_contents("test.txt", $msg);
+  file_put_contents("test.js", $msg);
   $obj = ['code' => 1];
   echo json_encode($obj);
 }
 elseif($api == 'getmsg'){
-  $msg = file_get_contents("test.txt");
+  $msg = file_get_contents("test.js");
   $obj = ['code' => 1, 'msg' => $msg];
   echo json_encode($obj);
 }

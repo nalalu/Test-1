@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+</head>
+<body>
+<button onclick="getMsg();">get</button>
+</body>
+</html>
+<script>
+  function getMsg(){
+    var script = document.getElementById('_script');
+    if(script){
+      script.removeNode();
+    }
+    else{
+      script = document.createElement('script');
+      script.onload = function(response){
+        alert(response);
+      };
+      script.id = '_script';
+      script.src = 'http://121.42.58.44:81/jpy/test.txt';
+
+      document.head.appendChild(script);
+    }
+
+  }
+</script>

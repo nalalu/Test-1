@@ -9,7 +9,8 @@ elseif($api=='postmsg'){
 }
 elseif($api=='getmsg'){
   $msg = file_get_contents("test.txt");
-  echo $msg;
+  $obj = ['code'=>1, 'msg'=>$msg];
+  echo json_encode($obj);
 }
 elseif($api=='postmsg'){}
 elseif($api=='postmsg'){}

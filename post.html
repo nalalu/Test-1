@@ -9,6 +9,7 @@
 <body>
 <input id="msg" value="hello world">
 <button onclick="sendMsg();">send</button>
+<button onclick="getMsg();">get</button>
 </body>
 </html>
 <script>
@@ -18,6 +19,13 @@
       alert(obj.code);
     };
     myquery('postmsg', post, callback);
+  }
+  function getMsg(){
+    var post = {'msg': $('#msg').val()};
+    var callback = function(obj){
+      alert(obj.msg);
+    };
+    myquery('getmsg', {}, callback);
   }
 
 </script>

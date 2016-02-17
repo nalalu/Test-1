@@ -7,7 +7,7 @@ function myquery(api, post, callback){
     url        : fullapi,
     method     : 'POST',
     crossDomain: true,
-    data       : q,
+    data       : post,
     error      : function(){
       //myalert("解析中出错，请检查网络");
       myalert("解析文件出错，请检查网络");

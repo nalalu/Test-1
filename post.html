@@ -15,7 +15,7 @@
   function sendMsg(){
     var post = {'msg': $('#msg').val()};
     var callback = function(obj){
-      console.log(obj);
+      alert(obj.code);
     };
     myquery('postmsg', post, callback);
   }
